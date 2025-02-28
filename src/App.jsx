@@ -1,9 +1,7 @@
 import './App.css'
 
 function App() {
- 
-
-  return None
+  return 
 }
 
 export default App
