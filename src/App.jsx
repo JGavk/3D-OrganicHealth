@@ -3,7 +3,7 @@ import './App.css'
 function App() {
  
 
-  return ( <h1> xavi </h1> )
+  return ( <h1> xavier </h1> )
 }
 
 export default App
