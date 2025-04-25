@@ -16,8 +16,8 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter basename={getBasename()}>
     <Layout>
       <Routes>
-        <Route path='/' element={< Landing/>}/>
-        <Route path='heart-issue' element={ <  HeartIssue />}/>
+        <Route path='/' element={< Landing />} />
+        <Route path='/heart-issue' element={ <  HeartIssue />} />
       </Routes>
     </Layout>
   </ BrowserRouter >,

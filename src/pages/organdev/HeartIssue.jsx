@@ -90,9 +90,11 @@ const HeartIssue = () => {
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
-            threeJsContainer.current.removeChild(renderer.domElement);
-        };
-    }, []);
+            if (threeJsContainer.current && renderer?.domElement) {
+              threeJsContainer.current.removeChild(renderer.domElement);
+            }
+          };
+        }, []);
     //GGWP
     return (
 

@@ -1,16 +1,20 @@
 import './Header.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const navigate = useNavigate();
     return (
         <header>
             <nav className="nav-bar">
                 <div className="nav-div">
-                    <a href="http://localhost:5173" className="logo-link">
+                <button onClick={() => navigate('/')} 
+                        className="logo-link"
+                        style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
                         <img src="/images/logo2.png" width="50" height="35" className="h-8" alt="Heart Wise Logo" />
                         <span className='business-name'>HEART WISE</span>
-                    </a>
+                    </button>
                 </div>
                 <div className='nav-right'>
                 <div className="dropdown-container">
@@ -30,7 +34,7 @@ const Header = () => {
               >
                 <button className="dropdown-item">3D Anatomy</button>
                 <button className="dropdown-item">Heart Issues</button>
-                <button className="dropdown-item" ><a href="/heart-issue">NaN</a></button>
+                <button className="dropdown-item" onClick={() => navigate('/heart-issue')}>NaN</button>
               </div>
             )}
           </div>

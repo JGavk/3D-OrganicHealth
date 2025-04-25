@@ -83,9 +83,11 @@ const Landing = () => {
 
         return () => {
             window.removeEventListener('resize', handleResize);
-            threeJsContainer.current.removeChild(renderer.domElement);
-        };
-    }, []);
+            if (threeJsContainer.current && renderer?.domElement) {
+              threeJsContainer.current.removeChild(renderer.domElement);
+            }
+          };
+        }, []);
 
     return (
         <div className='landing-container'>
