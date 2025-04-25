@@ -6,9 +6,13 @@ import './index.css';
 import HeartIssue from './pages/organdev/HeartIssue';
 
 
+const getBasename = () => {
+  if (import.meta.env.DEV) return '';
+  return window.location.pathname.split('/')[1] || '';
+};
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename={getBasename()}>
     <Layout>
       <Routes>
         <Route path='/' element={< Landing/>}/>
