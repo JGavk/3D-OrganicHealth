@@ -7,9 +7,10 @@ import HeartIssue from './pages/organdev/HeartIssue';
 
 
 const getBasename = () => {
-  if (import.meta.env.DEV) return '';
-  return window.location.pathname.split('/')[1] || '';
-};
+  if (import.meta.env.DEV) return ''
+  if (window.location.pathname === '/') return ''
+  return '/' + window.location.pathname.split('/')[1] || ''
+}
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename={getBasename()}>
