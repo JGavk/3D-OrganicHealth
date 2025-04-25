@@ -7,7 +7,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const Landing = () => {
     const threeJsContainer = useRef(null);
-    const heartModel = useRef(); // Reference to store our heart model
+    const heartModel = useRef(); 
 
     useEffect(() => {
 

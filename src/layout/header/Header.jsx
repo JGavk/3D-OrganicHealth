@@ -30,7 +30,7 @@ const Header = () => {
               >
                 <button className="dropdown-item">3D Anatomy</button>
                 <button className="dropdown-item">Heart Issues</button>
-                <button className="dropdown-item">NaN</button>
+                <button className="dropdown-item" ><a href="/heart-issue">NaN</a></button>
               </div>
             )}
           </div>
