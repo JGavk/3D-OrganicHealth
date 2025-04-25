@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <ul>
-                <li>Juan Puerta</li>
+                <li>Grupo 7</li>
 
             </ul>
         </footer>
