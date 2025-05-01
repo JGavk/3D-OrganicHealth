@@ -12,7 +12,7 @@ const Header = () => {
                 <button onClick={() => navigate('/')} 
                         className="logo-link"
                         style={{ background: 'none', border: 'none', cursor: 'pointer' }}>
-                        <img src="/images/logo2.png" width="50" height="35" className="h-8" alt="Heart Wise Logo" />
+                        <img src="/images/logo2.png" width="40" height="35" className="h-8" alt="Heart Wise Logo" />
                         <span className='business-name'>HEART WISE</span>
                     </button>
                 </div>
@@ -23,7 +23,7 @@ const Header = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              INTERACTIVE EXPERIENCE
+              EXPERIENCIA 3D
             </button>
             
             {isDropdownOpen && (
@@ -32,15 +32,15 @@ const Header = () => {
                 onMouseEnter={() => setIsDropdownOpen(true)}
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
-                <button className="dropdown-item">3D Anatomy</button>
-                <button className="dropdown-item">Heart Issues</button>
+                <button className="dropdown-item"> CORAZON </button>
+                <button className="dropdown-item"> PROBLEMAS </button>
                 <button className="dropdown-item" onClick={() => navigate('/heart-issue')}>NaN</button>
               </div>
             )}
           </div>
-                    <button className='nav-button'>TEST YOURSELF</button>
-                    <button className='nav-button'>THE TEAM</button>
-                    <button className='nav-button'>SIGN IN</button>
+                    <button className='nav-button'> QUIZ </button>
+                    <button className='nav-button'> GRUPO </button>
+                    <button className='nav-button'> INICIO </button>
                 </div>
             </nav>
         </header>

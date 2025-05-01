@@ -56,9 +56,11 @@ const Landing = () => {
         );
 
 
-        const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
+        const control = new OrbitControls(camera, renderer.domElement);
+        control.enableDamping = true;
+        control.dampingFactor = 0.05;
+        control.minDistance = 4; 
+        control.maxDistance = 4;   
 
 
         const animate = () => {
@@ -66,7 +68,7 @@ const Landing = () => {
             if (heartModel.current) {
                 heartModel.current.rotation.y += 0.0011; 
             }
-            controls.update();
+            control.update();
             renderer.render(scene, camera);
         };
         animate();
@@ -93,18 +95,18 @@ const Landing = () => {
         <div className='landing-container'>
             <div className='threejs-section' ref={threeJsContainer} />
             <div className='text-content-section'>
-                <h1>This is Heart Wise</h1>
-                <p className='subtitle'>An interactive Cardiac Health Visualization</p>
+                <h1>Bienvenido a Heart Wise</h1>
+                <p className='subtitle'>Una visualizacion interactiva de nuestro corazon</p>
                 
                 <div className='features'>
                     
                     <div className='feature-item'>
-                        <h3>Educational Tool</h3>
-                        <p>Learn about prevention, treatment, and heart-healthy lifestyle choices.</p>
+                        <h3>Una herramienta educativa</h3>
+                        <p>Conoce acerca de los problemas, sus tratamientos y estilos de vida.</p>
                     </div>
                 </div>
                 <div className='button-container'>
-                    <button className='cta-button'>Explore Your Heart</button>
+                    <button className='cta-button'>Explora tu corazón</button>
                 </div>
             </div>
         </div>
