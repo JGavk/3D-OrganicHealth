@@ -1,22 +1,90 @@
-:root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.landing-content {
+/* Landing page styles */
+.landing-container {
     display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    height: 100vh;
     width: 100%;
+}
+
+.threejs-section {
     flex: 1;
+    height: 100%;
+    background: #bbb8b8;
+}
+
+.text-content-section {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(152, 180, 136);
+}
+
+.text-content-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2a2a2a;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+
+.features {
+    margin: 2rem 0;
+}
+
+.feature-item {
+    margin-bottom: 2rem;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #1b252e;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 2rem; 
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background: #91bea8;
+    color: rgb(247, 247, 247);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: flex-start;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #238541;
+}
+
+
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+    }
+    
+    .threejs-section {
+        height: 50vh;
+    }
+    
+    .text-content-section {
+        padding: 2rem;
+    }
 }
