@@ -4,6 +4,7 @@ import Layout from './layout/Layout';
 import Landing from './pages/landing/Landing';
 import './index.css';
 import HeartIssue from './pages/organdev/HeartIssue';
+import Problems from './pages/heart-problem/Problems';
 
 
 const getBasename = () => {
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={< Landing />} />
         <Route path='/heart-issue' element={ <  HeartIssue />} />
+        <Route path='/problem'element={< Problems/>}/>
       </Routes>
     </Layout>
   </ BrowserRouter >,
