@@ -8,7 +8,7 @@
 .threejs-section {
     flex: 1;
     height: 100%;
-    background: #f0f0f0;
+    background: #bbb8b8;
 }
 
 .text-content-section {
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: white;
+    background: rgb(152, 180, 136);
 }
 
 .text-content-section h1 {
@@ -28,7 +28,7 @@
 
 .subtitle {
     font-size: 1.2rem;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 3rem;
 }
 
@@ -42,12 +42,12 @@
 
 .feature-item h3 {
     font-size: 1.3rem;
-    color: #0066cc;
+    color: #1b252e;
     margin-bottom: 0.5rem;
 }
 
 .feature-item p {
-    color: #555;
+    color: #ffffff;
     line-height: 1.6;
 }
 
@@ -59,8 +59,8 @@
 
 .cta-button {
     padding: 1rem 2rem;
-    background: #bdd5ec;
-    color: rgb(255, 255, 255);
+    background: #91bea8;
+    color: rgb(247, 247, 247);
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -71,7 +71,7 @@
 }
 
 .cta-button:hover {
-    background: #0055aa;
+    background: #238541;
 }
 
 

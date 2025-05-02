@@ -11,13 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/drei": "^10.0.6",
+    "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.2.0",
     "react-router-dom": "^7.5.2",
-    "three": "^0.176.0",
+    "three": "^0.160.0",
     "vercel": "^41.6.2"
   },
   "devDependencies": {
