@@ -28,7 +28,7 @@ function IschemicHeartModel(props) {
       }
     });
 
-    group.current.add(scene.clone()); 
+    group.current.add(scene.clone());
 
     return () => {
       if (group.current) {
