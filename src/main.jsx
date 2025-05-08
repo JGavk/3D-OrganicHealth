@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import Layout from './layout/Layout';
 import Landing from './pages/landing/Landing';
 import Problems from './pages/heart-problem/Problems';
-import BeatingHeart from './pages/beatingHeart/BeatingHeart';
+import BeatingHeart from './pages/beatingHeart/Beatingheart';
 import IschemicHeart from './pages/ischemicheart/IschemicHeart';
 import Heart1 from './pages/heart/Heart1'; 
 import HeartIssue from './pages/organdev/HeartIssue';
