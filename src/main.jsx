@@ -1,26 +1,31 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import Layout from './layout/Layout';
 import Landing from './pages/landing/Landing';
-import './index.css';
-import HeartIssue from './pages/organdev/HeartIssue';
 import Problems from './pages/heart-problem/Problems';
-
+import BeatingHeart from './pages/beatingHeart/BeatingHeart';
+import IschemicHeart from './pages/ischemicheart/IschemicHeart';
+import Heart1 from './pages/heart/Heart1'; 
+import HeartIssue from './pages/organdev/HeartIssue';
 
 const getBasename = () => {
-  if (import.meta.env.DEV) return ''
-  if (window.location.pathname === '/') return ''
-  return '/' + window.location.pathname.split('/')[1] || ''
-}
+  if (import.meta.env.DEV) return '';
+  if (window.location.pathname === '/') return '';
+  return '/' + window.location.pathname.split('/')[1] || '';
+};
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename={getBasename()}>
     <Layout>
       <Routes>
-        <Route path='/' element={< Landing />} />
-        <Route path='/heart-issue' element={ <  HeartIssue />} />
-        <Route path='/problem'element={< Problems/>}/>
+        <Route path='/' element={<Landing />} />
+        <Route path='/models' element={<Problems />} />
+        
+        <Route path='/models/stenosis' element={<HeartIssue />} />
+        <Route path='/models/beating' element={<BeatingHeart />} />
+        <Route path='/models/ischemic' element={<IschemicHeart />} />
+        <Route path='/models/miocard' element={<Heart1 />} />
       </Routes>
     </Layout>
-  </ BrowserRouter >,
+  </BrowserRouter>
 );
