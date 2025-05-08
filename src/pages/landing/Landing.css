@@ -1,22 +1,116 @@
-:root {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-.landing-content {
+/* Landing page styles */
+.landing-container {
     display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    height: 100vh;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.threejs-section {
     flex: 1;
+    height: 100%;
+    background: #bbb8b8;
+}
+
+.text-content-section {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        to right, 
+        rgba(152, 180, 136, 0) 0%, 
+        rgba(152, 180, 136, 1) 20%
+    );
+    position: relative;
+}
+.text-content-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px; 
+    background: linear-gradient(
+        to right, 
+        rgba(187, 184, 184, 0.8), 
+        transparent
+    );
+    pointer-events: none;
+}
+
+.text-content-section h1 {
+    font-size: 2.5rem;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1rem;
+    color: #2a2a2a;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    color: #111111;
+    margin-bottom: 3rem;
+}
+
+.features {
+    margin: 2rem 0;
+}
+
+.feature-item {
+    margin-bottom: 2rem;
+}
+
+.feature-item h3 {
+    font-size: 1.3rem;
+    color: #1b252e;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #000000;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly; 
+    margin-top: 2rem; 
+}
+
+.cta-button {
+    padding: 1rem 2.4rem;
+    background: #91bea8;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    align-self: flex-start;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #238541;
+}
+
+
+@media (max-width: 768px) {
+    .landing-container {
+        flex-direction: column;
+    }
+    
+    .threejs-section {
+        height: 50vh;
+    }
+    
+    .text-content-section {
+        padding: 2rem;
+    }
 }

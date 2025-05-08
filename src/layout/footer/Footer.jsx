@@ -2,11 +2,10 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <ul>
-                <li>Juan Puerta</li>
-
-            </ul>
+        <footer className="site-footer">
+            <div className="footer-content">
+                <p>&copy; {new Date().getFullYear()} Heart Wise. Todos los derechos reservados.</p>
+            </div>
         </footer>
     );
 };
