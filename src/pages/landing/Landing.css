@@ -22,8 +22,8 @@
     justify-content: center;
     background: linear-gradient(
         to right, 
-        rgba(152, 180, 136, 0) 0%, 
-        rgba(152, 180, 136, 1) 20%
+        rgba(4, 70, 148, 0.6) 0%, 
+        rgba(2, 40, 89, 0.4) 10%
     );
     position: relative;
 }
@@ -84,8 +84,8 @@
 
 .cta-button {
     padding: 1rem 2.4rem;
-    background: #91bea8;
-    color: rgb(0, 0, 0);
+    background: rgb(4, 70, 148, 0.6);
+    color: rgb(253, 253, 253);
     border: none;
     border-radius: 4px;
     font-weight: bold;
@@ -97,7 +97,7 @@
 }
 
 .cta-button:hover {
-    background: #238541;
+    background: #0a2c58;
 }
 
 
