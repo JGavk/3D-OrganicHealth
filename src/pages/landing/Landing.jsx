@@ -4,11 +4,12 @@ import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
     const threeJsContainer = useRef(null);
     const heartModel = useRef(); 
-
+    const navigate = useNavigate();
     useEffect(() => {
 
         const scene = new THREE.Scene();
@@ -96,17 +97,18 @@ const Landing = () => {
             <div className='threejs-section' ref={threeJsContainer} />
             <div className='text-content-section'>
                 <h1>Bienvenido a Heart Wise</h1>
-                <p className='subtitle'>Una visualizacion interactiva de nuestro corazon</p>
+                <p className='subtitle'>Una visualización interactiva de nuestro corazón</p>
                 
                 <div className='features'>
                     
                     <div className='feature-item'>
-                        <h3>Una herramienta educativa</h3>
-                        <p>Conoce acerca de los problemas, sus tratamientos y estilos de vida.</p>
+                        <h3>Ingresa a la experiencia 3D</h3>
+                        <p>Selecciona una opción de acuerdo a tu interés, si deseas conocer sobre el corazón ó si deseas conocer algunas de las posibles enfermedades de esté órgano</p>
                     </div>
                 </div>
                 <div className='button-container'>
                     <button className='cta-button'>Explora tu corazón</button>
+                    <button className='cta-button'onClick={() => navigate('/models')}>Enfermedades del corazón</button>
                 </div>
             </div>
         </div>

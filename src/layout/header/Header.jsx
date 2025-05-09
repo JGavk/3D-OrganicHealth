@@ -33,8 +33,7 @@ const Header = () => {
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <button className="dropdown-item"> CORAZON </button>
-                <button className="dropdown-item" onClick={() => navigate('/problem')}> PROBLEMAS </button>
-                <button className="dropdown-item" onClick={() => navigate('/heart-issue')}>NaN</button>
+                <button className="dropdown-item" onClick={() => navigate('/models')}> PATOLOGIA </button>
               </div>
             )}
           </div>
