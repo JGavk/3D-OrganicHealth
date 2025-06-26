@@ -1,25 +1,25 @@
 import './Header.css';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isBorderVisible, setIsBorderVisible] = useState(true);
 
-  const handleNavClick = (path) => {
-    setIsBorderVisible(false); 
-    navigate(path);
-  }
+  useEffect(() => {
+    setIsBorderVisible(location.pathname !== '/');
+  }, [location.pathname]);
 
   return (
     <header>
       <nav 
         className="nav-bar" 
-        style={{borderBottom: isBorderVisible ? '2px solid #ccc' : 'none' }}
+        style={{borderBottom: isBorderVisible ? '1px solid' : 'none' }}
       >
         <div className="nav-div">
           <button
-            onClick={() => handleNavClick('/')}
+            onClick={() => navigate('/')}
             className="logo-link"
             style={{ background: 'none', border: 'none', cursor: 'pointer' }}
           >
@@ -39,7 +39,7 @@ const Header = () => {
           <button className="nav-button" onClick={() => navigate('/models')}>ENFERMEDADES</button>
           <button className="nav-button">QUIZ</button>
           <button className="nav-button">SOBRE NOSOTROS</button>
-          <button className="nav-button">INICIAR SESIÓN</button>
+          <button className="nav-button">INICIAR SESIÓN / REGISTRARSE</button>
         </div>
       </nav>
     </header>
