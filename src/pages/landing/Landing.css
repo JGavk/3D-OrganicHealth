@@ -1,116 +1,245 @@
-/* Landing page styles */
+/* Estilo principal para la landing */
 .landing-container {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  background-color: #dddddd; 
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .threejs-section {
-    flex: 1;
-    height: 100%;
-    background: #bbb8b8;
+  flex: 1;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .text-content-section {
-    flex: 1;
-    font-family: Arial, sans-serif;
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(
-        to right, 
-        rgba(4, 70, 148, 0.6) 0%, 
-        rgba(2, 40, 89, 0.4) 10%
-    );
-    position: relative;
-}
-.text-content-section::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 30px; 
-    background: linear-gradient(
-        to right, 
-        rgba(187, 184, 184, 0.8), 
-        transparent
-    );
-    pointer-events: none;
+  flex: 1;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .text-content-section h1 {
-    font-size: 2.5rem;
-    font-family: Arial, sans-serif;
-    margin-bottom: 1rem;
-    color: #2a2a2a;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a2a2a;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 0.2rem;
+  line-height: 0.01; 
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    font-family: Arial, sans-serif;
-    color: #111111;
-    margin-bottom: 3rem;
-}
-
-.features {
-    margin: 2rem 0;
-}
-
-.feature-item {
-    margin-bottom: 2rem;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature-item h3 {
-    font-size: 1.3rem;
-    color: #1b252e;
-    margin-bottom: 0.5rem;
-}
-
-.feature-item p {
-    color: #000000;
-    line-height: 1.6;
-    text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-evenly; 
-    margin-top: 2rem; 
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .cta-button {
-    padding: 1rem 2.4rem;
-    background: rgb(4, 70, 148, 0.6);
-    color: rgb(253, 253, 253);
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    align-self: flex-start;
-    transition: background 0.3s;
+  padding: 1rem 2.4rem;
+  background: rgba(4, 70, 148, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .cta-button:hover {
-    background: #0a2c58;
+  background: #0a2c58;
+}
+
+/* Corazón a la derecha */
+.threejs-section {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.enfermedades-section {
+  padding-top: 10rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+}
+
+.enfermedades-section .subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-item img {
+  width: 190px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-section {
+  padding-top: 10rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+}
+
+.quiz-section .subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.carouselq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.grupo-section {
+  padding-top: 10rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+   padding-bottom: 11rem;
+}
+
+.grupo-section .subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.carouselg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselg::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselg-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.carouselg-item:hover {
+  transform: scale(1.05);
+}
+
+.carouselg-item img {
+  width: 190px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 
+/* Responsivo */
 @media (max-width: 768px) {
-    .landing-container {
-        flex-direction: column;
-    }
-    
-    .threejs-section {
-        height: 50vh;
-    }
-    
-    .text-content-section {
-        padding: 2rem;
+  .landing-container {
+    flex-direction: column;
+  }
+
+  .threejs-section {
+    height: 50vh;
+    width: 100%;
+  }
+
+  .text-content-section {
+    padding: 2rem 1rem;
     }
 }

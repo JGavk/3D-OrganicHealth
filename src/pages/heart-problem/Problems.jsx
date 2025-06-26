@@ -6,7 +6,7 @@ function Problems() {
   const heartModels = [
     {
       id: 'stenosis',
-      name: "Estenosis Aórtica",
+      name: "Estenosis aórtica",
       description: "Descubre un poco sobre esta enfermedad de la válvula cardíaca",
       image: "/images/aaa.jpg"
     },
