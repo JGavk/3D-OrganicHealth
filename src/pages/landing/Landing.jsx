@@ -94,7 +94,7 @@ const Landing = () => {
     <>
       <div id="inicio" className='landing-container'>
         <div className='text-content-section'>
-          <h1>Bievenido a Heart Wise</h1>
+          <h1>Bienvenido a Heart Wise</h1>
           <p className='subtitle'>
             Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano vital.
           </p>
