@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      {
+        "source": "/heart-issue",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/heart-issue/:path*",
+        "destination": "/index.html"
+      }
+    ]
+  }

@@ -1,9 +1,7 @@
 import './App.css'
 
 function App() {
- 
-
-  return ( <h1> xavier andreu lópez robledo </h1> )
+  return 
 }
 
 export default App
