@@ -1,4 +1,9 @@
+
+
+
+
 .heart-beating-container{
+  position: relative;
     width: 100vw;
     height: 100vh;
     background: rgb(10, 20, 40);
@@ -6,6 +11,31 @@
     position: relative;
     overflow: hidden;
   }
+
+  .cta-button {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  z-index: 10;
+  width: auto;            /* <-- Asegúrate de que esto está, para evitar 100% */
+  min-width: 100px;       /* Opcional: tamaño mínimo para un buen look */
+  max-width: 160px;       /* Opcional: tamaño máximo para evitar desbordes */
+  padding: 10px 20px;     
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background: #10396e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-sizing: border-box; 
+  display: inline-block;  
+  text-align: center;
+}
+.cta-button:hover {
+  background: #133664;
+}
   
 
   .heart-beating-canvas {
@@ -14,7 +44,7 @@
   
   .description-panel {
     position: absolute;
-    right: 20px;
+    right: 20px ;
     top: 50%;
     transform: translateY(-50%);
     width: 300px;
@@ -25,6 +55,9 @@
     z-index: 10;
     pointer-events: none;
   }
+
+ 
+
   
   .description-panel h2 {
     margin-top: 0;
