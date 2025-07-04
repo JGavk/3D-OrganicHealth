@@ -6,7 +6,7 @@ import Problems from './pages/heart-problem/Problems';
 import BeatingHeart from './pages/beatingHeart/Beatingheart';
 import IschemicHeart from './pages/ischemicheart/IschemicHeart';
 import Heart1 from './pages/heart/Heart1';
-import Heart2 from './pages/heart/Heart2'; // 👈 NUEVA IMPORTACIÓN
+import Heart2 from './pages/heart/Heart2'; 
 import HeartIssue from './pages/organdev/HeartIssue';
 
 const getBasename = () => {
@@ -25,7 +25,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/models/beating' element={<BeatingHeart />} />
         <Route path='/models/ischemic' element={<IschemicHeart />} />
         <Route path='/models/miocard' element={<Heart1 />} />
-        <Route path='/models/sintomas' element={<Heart2 />} /> {/* 👈 NUEVA RUTA */}
+        <Route path='/models/sintomas' element={<Heart2 />} /> 
       </Routes>
     </Layout>
   </BrowserRouter>
