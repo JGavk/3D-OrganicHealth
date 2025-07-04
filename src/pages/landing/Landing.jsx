@@ -163,7 +163,7 @@ const Landing = () => {
             { name: 'Juan Pablo Puerta Gaviria', img: '/public/images/aaa.jpg' },
             { name: 'Cristhian Felipe Ramirez Marulanda', img: '/public/images/bbb.jpg' },
             { name: 'Jenifer Ortiz Torres', img: '/public/images/jot.jpg' },
-            { name: 'Xavier Andreu Lopez Robledo', img: '/public/images/ddd.jpg' }
+            { name: 'Xavier Andreu Lopez Robledo', img: '/public/images/xalr.jpg' }
           ].map((grupo) => (
             <div className='carouselg-item' key={grupo.name}>
               <img src={grupo.img} alt={grupo.name} />
