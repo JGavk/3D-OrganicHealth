@@ -16,6 +16,7 @@ body {
   position: absolute;
 }
 
+
 .description-panel-ih {
   position: absolute;
   bottom: 20px;
@@ -53,6 +54,7 @@ body {
   text-align: justify;
 }
 
+
 .cta-button-ih {
   padding: 1rem 2.4rem;
   background:  #7e8285;
@@ -66,4 +68,3 @@ body {
 
 .cta-button-ih:hover {
   background: #0a2c58;
-}

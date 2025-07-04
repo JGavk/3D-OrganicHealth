@@ -1,38 +1,106 @@
 .heart-issue-container {
-    width: 100vw;
-    height: 100vh;
-    background: rgb(10, 20, 40);
-    cursor: grab;
-    position: relative;
-    overflow: hidden;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  background: rgb(10, 20, 40);
+  cursor: grab;
+  position: relative;
+  overflow: hidden;
+}
 
-  .heart-issue-canvas {
-    position: absolute;
-  }
-  
-  .description-panel {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 10;
-    pointer-events: none;
-  }
-  
-  .description-panel h2 {
-    margin-top: 0;
-  }
 
-  /*TEXT FONT*/
-  .description-panel p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: justify;
+.heart-issue-canvas {
+  pointer-events: auto; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.description-panel {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 140%);
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  z-index: 10;
+  font-size: 0.85rem;
+  height: auto;             
+  max-height: fit-content;   
+}
+
+.description-panel button {
+  pointer-events: auto;
+  background: #7e8285;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.description-panel button:hover {
+  background: #2980b9;
+}
+
+.overlay-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInOverlay 0.5s ease forwards;
+}
+
+@keyframes fadeInOverlay {
+  to {
+    opacity: 1;
   }
+}
+.overlay-content {
+  width: 90%;
+  max-width: 1000px;
+  background: #232f46;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+  Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.overlay-canvas-container canvas {
+  pointer-events: none;
+  z-index: 0;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  color: white;
+  border: none;
+  z-index: 1001;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.instruction-panel {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
