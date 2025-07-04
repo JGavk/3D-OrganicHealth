@@ -7,6 +7,7 @@ import BeatingHeart from './pages/beatingHeart/Beatingheart';
 import IschemicHeart from './pages/ischemicheart/IschemicHeart';
 import Heart1 from './pages/heart/Heart1'; 
 import HeartIssue from './pages/organdev/HeartIssue';
+import Heartfragmented from './pages/heartFragmented/Heartfragmented';
 
 const getBasename = () => {
   if (import.meta.env.DEV) return '';
@@ -20,11 +21,13 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/models' element={<Problems />} />
+        <Route path='/symptoms' element={<Heartfragmented/>} />
         
         <Route path='/models/stenosis' element={<HeartIssue />} />
         <Route path='/models/beating' element={<BeatingHeart />} />
         <Route path='/models/ischemic' element={<IschemicHeart />} />
         <Route path='/models/miocard' element={<Heart1 />} />
+        
       </Routes>
     </Layout>
   </BrowserRouter>
