@@ -3,21 +3,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.9); 
+    background: #dddddd;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    color: #333; 
+    border-bottom: none; 
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 0 5%;
+    padding: 0 2rem; /* Espaciado lateral */
     box-sizing: border-box;
+    transition: all 0.3s ease;
+    color: #333;
 }
+
 body, html {
     margin: 0;
     padding: 0;
