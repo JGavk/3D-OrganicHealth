@@ -38,7 +38,7 @@ const Header = () => {
           <button className="nav-button" onClick={() => navigate('/')}>INICIO</button>
           <button className="nav-button" onClick={() => navigate('/models')}>ENFERMEDADES</button>
           <button className="nav-button">QUIZ</button>
-          <button className="nav-button">SOBRE NOSOTROS</button>
+          <button className="nav-button" onClick={()=> navigate('/about')}>SOBRE NOSOTROS</button>
           <button className="nav-button">INICIA SESIÓN</button>
         </div>
       </nav>
