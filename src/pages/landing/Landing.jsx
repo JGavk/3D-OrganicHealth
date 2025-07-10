@@ -59,7 +59,7 @@ const Landing = () => {
     const animate = () => {
       requestAnimationFrame(animate);
       if (heartModel.current) {
-        heartModel.current.rotation.y += 0.009;
+        heartModel.current.rotation.y += 0.003;
       }
       control.update();
       renderer.render(scene, camera);
@@ -142,32 +142,9 @@ const Landing = () => {
             </div>
           ))}
         </div>
-        <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('grupo')}>
-            CONTÁCTANOS
-        </button>
-        </section>
-
-        {/* Sección de sobre nosotros */}
-      <section id='grupo' className='grupo-section'>
-        <p className='subtitle'>
-            Equipo de desarrollo
-          </p>
-        <div className='carouselg'>
-          {[
-            { name: 'Juan Pablo Puerta Gaviria', img: '/public/images/aaa.jpg' },
-            { name: 'Cristhian Felipe Ramirez Marulanda', img: '/public/images/bbb.jpg' },
-            { name: 'Jenifer Ortiz Torres', img: '/public/images/jot.jpg' },
-            { name: 'Xavier Andreu Lopez Robledo', img: '/public/images/xalr.jpg' }
-          ].map((grupo) => (
-            <div className='carouselg-item' key={grupo.name}>
-              <img src={grupo.img} alt={grupo.name} />
-              <p>{grupo.name}</p>
-            </div>
-          ))}
-        </div>
-        <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
+            <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
             REINICIAR RECORRIDO
-        </button>
+          </button>
         </section>
     </>
   );

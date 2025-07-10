@@ -1,0 +1,40 @@
+.carouselg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselg::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselg-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.carouselg-item:hover {
+  transform: scale(1.05);
+}
+
+.carouselg-item img {
+  width: 190px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
