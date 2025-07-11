@@ -53,37 +53,18 @@ function Heart2() {
         </Canvas>
       </KeyboardControls>
 
-      <div className="description-panel">
-        <h2>¿Cuáles son?</h2>
-        <p>
-          Dolor en el pecho, dificultad para respirar, náuseas, fatiga, sudoración excesiva,
-          y sensación de presión o ardor. Estos síntomas pueden variar, pero son signos clave
-          del infarto agudo del miocardio.
-        </p>
-      </div>
-
-      <div style={{
-        position: 'absolute',
-        right: 20,
-        bottom: 30
-      }}>
-        <button
-          onClick={() => navigate('/models/miocard')}
-          style={{
-            backgroundColor: '#E63946',
-            color: 'white',
-            padding: '10px 20px',
-            border: 'none',
-            borderRadius: '10px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseOver={(e) => (e.target.style.opacity = '0.85')}
-          onMouseOut={(e) => (e.target.style.opacity = '1')}
-        >
-          Regresar
-        </button>
+      <div className="description-wrapper">
+        <div className="description-panel">
+          <h2>¿Cuáles son?</h2>
+          <p>
+            Dolor en el pecho, dificultad para respirar, náuseas, fatiga, sudoración excesiva,
+            y sensación de presión o ardor. Estos síntomas pueden variar, pero son signos clave
+            del infarto agudo del miocardio.
+          </p>
+          <button onClick={() => navigate('/models/miocard')}>
+            Regresar
+          </button>
+        </div>
       </div>
 
       <Outlet />
