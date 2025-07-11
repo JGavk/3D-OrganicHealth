@@ -51,8 +51,9 @@ function HeartIssue() {
       
       {showOverlay && (
         <div className="overlay-screen">
+
           <div className="overlay-content">
-            <button 
+                                                <button 
               className="close-button"
               onClick={(e) => {
                 e.stopPropagation();
@@ -87,7 +88,9 @@ function HeartIssue() {
               <p>Gira el modelo para ver la válvula afectada</p>
               <p>Reemplazo Valvular Aórtico (RVA) convencional: Reemplazar la válvula aórtica estrechada por una nueva válvula que permita
                  el flujo normal de sangre desde el ventrículo izquierdo hacia la aorta.</p>
+
             </div>
+
           </div>
         </div>
       )}
