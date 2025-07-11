@@ -111,10 +111,10 @@ const Landing = () => {
           </p>
         <div className='carousel'>
           {[
-            { name: 'Estenosis aórtica', img: '/public/images/aaa.jpg' },
-            { name: 'Insuficiencia cardíaca', img: '/public/images/bbb.jpg' },
-            { name: 'Cardiopatía isquémica', img: '/public/images/ccc.jpg' },
-            { name: 'Infarto agudo del miocardio', img: '/public/images/ddd.jpg' }
+            { name: 'Estenosis aórtica', img: '/images/aaa.jpg' },
+            { name: 'Insuficiencia cardíaca', img: '/images/bbb.jpg' },
+            { name: 'Cardiopatía isquémica', img: '/images/ccc.jpg' },
+            { name: 'Infarto agudo del miocardio', img: '/images/ddd.jpg' }
           ].map((enfermedad) => (
             <div className='carousel-item' key={enfermedad.name}>
               <img src={enfermedad.img} alt={enfermedad.name} />
@@ -134,7 +134,7 @@ const Landing = () => {
         </p>
         <div className='carouselq'>
           {[
-            { name: 'Quiz interactivo', img: '/public/images/quiz.gif' },
+            { name: 'Quiz interactivo', img: '/images/quiz.gif' },
           ].map((quiz) => (
             <div className='carousel-item' key={quiz.name}>
               <img src={quiz.img} alt={quiz.name} />
