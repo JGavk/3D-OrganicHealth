@@ -37,16 +37,18 @@ function HeartIssue() {
         <FixedText>Estenosis Aórtica</FixedText>
       </Canvas>
       
-      <div className="description-panel">
-        <h2>¿Qué es?</h2>
-        <p>
-          Es una enfermedad cardíaca que estrecha la válvula aórtica,
-          dificultando el flujo de sangre desde el ventrículo izquierdo hacia la aorta. 
-          Esto hace que el corazón tenga que trabajar más para bombear sangre.
-        </p>
-        <button onClick={() => setShowOverlay(true)}>
-          ¿Quieres conocer tratamientos?
-        </button>
+      <div className="description-wrapper">
+        <div className="description-panel">
+          <h2>¿Qué es?</h2>
+          <p>
+            Es una enfermedad cardíaca que estrecha la válvula aórtica,
+            dificultando el flujo de sangre desde el ventrículo izquierdo hacia la aorta. 
+            Esto hace que el corazón tenga que trabajar más para bombear sangre.
+          </p>
+          <button onClick={() => setShowOverlay(true)}>
+            ¿Quieres conocer tratamientos?
+          </button>
+        </div>
       </div>
       
       {showOverlay && (

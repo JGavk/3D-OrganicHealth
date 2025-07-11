@@ -104,33 +104,32 @@ const Landing = () => {
         <div className='threejs-section' ref={threeJsContainer} />
       </div>
 
-      {/* Sección de enfermedades */}
       <div id='enfermedades' className='enfermedades-section'>
         <p className='subtitle'>
             Enfermedades cardíacas más comunes
           </p>
         <div className='carousel'>
           {[
-            { name: 'Estenosis aórtica', img: '/images/aaa.jpg' },
-            { name: 'Insuficiencia cardíaca', img: '/images/bbb.jpg' },
-            { name: 'Cardiopatía isquémica', img: '/images/ccc.jpg' },
-            { name: 'Infarto agudo del miocardio', img: '/images/ddd.jpg' }
+            { id: 'stenosis', name: 'Estenosis aórtica', img: '/images/aaa.jpg'},
+            { id: 'beating', name: 'Insuficiencia cardíaca', img: '/images/bbb.jpg' },
+            { id: 'ischemic', name: 'Cardiopatía isquémica', img: '/images/ccc.jpg' },
+            { id: 'miocard', name: 'Infarto agudo del miocardio', img: '/images/ddd.jpg' }
           ].map((enfermedad) => (
-            <div className='carousel-item' key={enfermedad.name}>
+            <div className='carousel-item' onClick={() => navigate(`/models/${enfermedad.id}`)} key={enfermedad.id}>
               <img src={enfermedad.img} alt={enfermedad.name} />
               <p>{enfermedad.name}</p>
             </div>
           ))}
         </div>
         <button className='cta-button' style={{ marginTop: '2rem' }} onClick={() => scrollToSection('quiz')}>
-          PONTE A PRUEBA
+          Ver Más
         </button>
       </div>
 
       {/* Sección de quiz */}
       <section id="quiz" className="quiz-section">
         <p className="subtitle">
-            Prueba nuestro Quiz interactivo
+            Prueba el Quiz interactivo
         </p>
         <div className='carouselq'>
           {[
@@ -143,7 +142,7 @@ const Landing = () => {
           ))}
         </div>
             <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
-            REINICIAR RECORRIDO
+            Subir
           </button>
         </section>
     </>
