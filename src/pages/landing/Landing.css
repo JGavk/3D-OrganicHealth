@@ -1,0 +1,207 @@
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #dddddd; 
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.threejs-section {
+  flex: 1;
+  background: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.text-content-section {
+  flex: 1;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text-content-section h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a2a2a;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 0.2rem;
+  line-height: 0.01; 
+}
+
+.subtitle {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  text-align: justify;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  text-align: center;
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2.4rem;
+  margin-bottom: 1rem;
+  background: rgba(4, 70, 148, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #0a2c58;
+}
+
+/* Corazón a la derecha */
+.threejs-section {
+  flex: 1;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.enfermedades-section {
+  padding-top: 0.2rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+}
+
+.enfermedades-section .subtitle {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.carousel {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  cursor: pointer;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-item img {
+  width: 190px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-section {
+  padding-top: 2rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+}
+
+.quiz-section .subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.carouselq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: -6rem;       
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.grupo-section {
+  padding-top: 5rem;
+  background: #dddddd;  
+  width: 100%;  
+  overflow: hidden;
+   padding-bottom: 11rem;
+}
+
+.grupo-section .subtitle {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+  }
+
+  .threejs-section {
+    height: 50vh;
+    width: 100%;
+
+  }
+
+  .text-content-section {
+    padding: 2rem 1rem;
+    }
+}
