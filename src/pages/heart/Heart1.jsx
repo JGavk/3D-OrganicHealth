@@ -29,7 +29,7 @@ function Heart1() {
           <Stars radius={100} depth={50} count={5000} factor={4} fade speed={2} />
 
           <HeartModel1
-            scale={1}
+            scale={0.5}
             position={[0, 0, 0]}
             onClick={() => alert('¡Hiciste clic en el corazón!')}
           />
@@ -53,39 +53,20 @@ function Heart1() {
         </Canvas>
       </KeyboardControls>
 
-      <div className="description-panel">
-        <h2>¿Qué es?</h2>
-        <p>
-          El infarto agudo del miocardio (IAM), comúnmente conocido como ataque al corazón,
-          es una condición médica crítica que ocurre cuando el flujo sanguíneo a una parte
-          del corazón se interrumpe repentinamente, lo que causa daño en el músculo cardíaco.
-          Esta falta de oxígeno puede ocurrir debido a la obstrucción de una arteria coronaria
-          por un coágulo sanguíneo, lo que requiere atención médica urgente.
-        </p>
-      </div>
-
-      <div style={{
-        position: 'absolute',
-        right: 20,
-        bottom: 30
-      }}>
-        <button
-          onClick={() => navigate('/models/sintomas')}
-          style={{
-            backgroundColor: '#E63946',
-            color: 'white',
-            padding: '10px 20px',
-            border: 'none',
-            borderRadius: '10px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseOver={(e) => (e.target.style.opacity = '0.85')}
-          onMouseOut={(e) => (e.target.style.opacity = '1')}
-        >
-          Ver síntomas
-        </button>
+      <div className="description-wrapper">
+        <div className="description-panel">
+          <h2>¿Qué es?</h2>
+          <p>
+            El infarto agudo del miocardio (IAM), comúnmente conocido como ataque al corazón,
+            es una condición médica crítica que ocurre cuando el flujo sanguíneo a una parte
+            del corazón se interrumpe repentinamente, lo que causa daño en el músculo cardíaco.
+            Esta falta de oxígeno puede ocurrir debido a la obstrucción de una arteria coronaria
+            por un coágulo sanguíneo, lo que requiere atención médica urgente.
+          </p>
+          <button onClick={() => navigate('/models/sintomas')}>
+            Ver síntomas
+          </button>
+        </div>
       </div>
 
       <Outlet />
