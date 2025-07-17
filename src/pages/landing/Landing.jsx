@@ -90,9 +90,10 @@ const Landing = () => {
 
    return (
     <>
-      <div id="inicio" className='landing-container'>
+    <div id='container-for-background' className='landing-cont'>
+      <div id="inicio" className='landing-container' >
         <div className='text-content-section'>
-          <p className='subtitle'>
+          <p className='introduction-text'>
             Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano vital
           </p>
           <div className='button-container'>
@@ -103,7 +104,7 @@ const Landing = () => {
         </div>
         <div className='threejs-section' ref={threeJsContainer} />
       </div>
-
+    </div>
       <div id='enfermedades' className='enfermedades-section'>
         <p className='subtitle'>
             Enfermedades cardíacas más comunes
@@ -122,11 +123,10 @@ const Landing = () => {
           ))}
         </div>
         <button className='cta-button' style={{ marginTop: '2rem' }} onClick={() => scrollToSection('quiz')}>
-          Ver Más
+          VER MÁS
         </button>
       </div>
 
-      {/* Sección de quiz */}
       <section id="quiz" className="quiz-section">
         <p className="subtitle">
             Prueba el Quiz interactivo
@@ -142,7 +142,7 @@ const Landing = () => {
           ))}
         </div>
             <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
-            Subir
+            SUBIR
           </button>
         </section>
     </>
