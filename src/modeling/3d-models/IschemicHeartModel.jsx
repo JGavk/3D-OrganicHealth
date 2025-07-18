@@ -4,14 +4,14 @@ import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 
-function IschemicHeartModel(props) {
+function IschemicHeartModel() {
   const group = useRef();
   const { scene } = useGLTF('/models/ischemicHeart.glb');
   const time = useRef(0);
   const [heartbeatSpeed, setHeartbeatSpeed] = useState(4.7);
 
   useEffect(() => {
-    const speeds = { N: 4.7, G: 5, T: 7.3, B: 3.3 };
+    const speeds = {T: 7.3, B: 3.3 };
     const handleKeyDown = (e) => {
       const speed = speeds[e.key.toUpperCase()];
       if (speed) setHeartbeatSpeed(speed);
@@ -62,9 +62,6 @@ function IschemicHeartModel(props) {
   return (
     <group
       ref={group}
-      {...props}
-      onPointerEnter={() => props.onHoverChange?.(true)}
-    onPointerLeave={() => props.onHoverChange?.(false)}
     />
   );
 }
