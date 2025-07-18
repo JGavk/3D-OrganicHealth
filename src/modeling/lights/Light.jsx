@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import useControls from './useControls';
 
-function DynamicLight() {
+function DynamicLight({ disabled = false,  focused = true }) {
     const lightRef = useRef();
     const { camera } = useThree();
     const controls = useControls();
@@ -20,7 +20,7 @@ function DynamicLight() {
     const maxHeight = 4; 
 
     useFrame(() => {
-        if (!lightRef.current) return;
+        if (disabled || !focused ||!lightRef.current) return;
 
         // Q for an up diagonally movement 
         if (controls.current.forward) { 

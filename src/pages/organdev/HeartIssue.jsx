@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { Stars } from '@react-three/drei';
 import FixedText from '../../modeling/lights/FixedText';
 import HeartModel from '../../modeling/3d-models/HeartModel';
-import HeartSecondAorticModel from '../../modeling/3d-models/HeartSecondAorticModel';
+import Overlay from '../../modeling/overlay-data/Overlay';
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
 import './HeartIssue.css'; 
@@ -19,24 +19,17 @@ function HeartIssue() {
         shadows
         camera={{ position: [0, 2, 5], fov: 50 }}
         gl={{ antialias: true }}
-        className="heart-issue-canvas"
+        className={`heart-issue-canvas ${showOverlay ? 'no-events' : ''}`}
       >
         <ambientLight intensity={0.7} />
-        <pointLight 
-          position={[3, 5, 2]} 
-          color="#88aaff"
-          intensity={1.5} 
-          distance={50}
-          decay={1}
-          castShadow
-        />
-        <DynamicLight /> 
-        <ShadowPlane/>
+        <pointLight position={[3, 5, 2]} color="#88aaff" intensity={1.5} distance={50} decay={1} castShadow />
+        <DynamicLight disabled={showOverlay} />
+        <ShadowPlane />
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
         <HeartModel scale={1} position={[0, 0, 0]} />
         <FixedText>Estenosis Aórtica</FixedText>
       </Canvas>
-      
+
       <div className="description-wrapper">
         <div className="description-panel">
           <h2>¿Qué es?</h2>
@@ -50,53 +43,7 @@ function HeartIssue() {
           </button>
         </div>
       </div>
-      
-      {showOverlay && (
-        <div className="overlay-screen">
-
-          <div className="overlay-content">
-                                                <button 
-              className="close-button"
-              onClick={(e) => {
-                e.stopPropagation();
-                setShowOverlay(false);
-              }}> × </button>
-            
-            <h2>Operación y Tratamientos</h2>
-            
-            <div className="overlay-canvas-container">
-              <Canvas
-                      shadows
-                      camera={{ position: [0, 2, 5], fov: 50 }}
-                      gl={{ antialias: true }}
-                      className="heart-issue-canvas">
-                  <ambientLight intensity={0.5} />
-                  <ShadowPlane/>
-                  <Stars radius={100} depth={50} count={5000} factor={4} fade />
-                  <DynamicLight />
-                  <pointLight 
-                    position={[3, 5, 2]} 
-                    color="#88aaff"
-                    intensity={1.5} 
-                    distance={50}
-                    decay={1}
-                    castShadow
-                  />
-                <HeartSecondAorticModel scale={1} position={[0, 0, 0]} />
-              </Canvas>
-            </div>
-            
-            <div className="instruction-panel">
-              <p>Gira el modelo para ver la válvula afectada</p>
-              <p>Reemplazo Valvular Aórtico (RVA) convencional: Reemplazar la válvula aórtica estrechada por una nueva válvula que permita
-                 el flujo normal de sangre desde el ventrículo izquierdo hacia la aorta.</p>
-
-            </div>
-
-          </div>
-        </div>
-      )}
-      
+      {showOverlay && <Overlay onClose={() => setShowOverlay(false)} />}
       <Outlet />
     </div>
   );

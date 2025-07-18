@@ -64,6 +64,9 @@ function Heart2() {
           <button onClick={() => navigate('/models/miocard')}>
             Regresar
           </button>
+          <button onClick={() => navigate('/models/solutions')}>
+            Posibles soluciones
+          </button>
         </div>
       </div>
 
