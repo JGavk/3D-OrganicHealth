@@ -94,7 +94,7 @@ const Landing = () => {
       <div id="inicio" className='landing-container' >
         <div className='text-content-section'>
           <p className='introduction-text'>
-            Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano vital
+            Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano
           </p>
           <div className='button-container'>
             <button className='cta-button' onClick={() => scrollToSection('enfermedades')}>
