@@ -1,6 +1,5 @@
-import SymptomsDiseaseModel from '../3d-models/SymptomsDiseaseModel';
-import TreatmentDiseaseModel from '../3d-models/treatmentDiseaseModel';
-
+import SymptomsDiseaseModel from '../3d-models/SymptomsIH';
+import TreatmentDiseaseModel from '../3d-models/TreatmentIH';
 
 const overlayInfo = [
     {
