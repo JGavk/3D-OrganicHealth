@@ -1,6 +1,7 @@
 import SymptomsDiseaseModel from '../3d-models/SymptomsDiseaseModel';
 import TreatmentDiseaseModel from '../3d-models/treatmentDiseaseModel';
 
+
 const overlayInfo = [
     {
         title: 'Síntomas',
