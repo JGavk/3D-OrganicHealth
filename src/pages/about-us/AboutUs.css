@@ -1,12 +1,12 @@
 .carouselg {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 0.8rem;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: -6rem;       
+  margin-top: 1rem;       
   overflow-x: auto;
   scroll-snap-type: x mandatory;
 }
@@ -38,3 +38,24 @@
   border-radius: 4px;
   margin-bottom: 0.5rem;
 }
+
+.subtitlee {
+  width: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #555;
+  margin: 30 auto 10px auto;
+}
+
+.prop-text {
+  font-size: 1.2rem;
+  margin: 30 auto 150px auto;
+  color: #555;
+  text-align: justify;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
