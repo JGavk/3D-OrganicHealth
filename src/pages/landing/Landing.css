@@ -56,7 +56,7 @@
   color:rgb(59, 178, 182);
   position: relative;
   padding: 50px;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   text-align: justify;
 }
 .subtitle {
@@ -93,6 +93,7 @@
   background: transparent;
   color: #0e095e;
   border: none;
+  font-size: 1.1rem;
   width: 800px;
   border-radius: 100px;
   font-weight: bold;
