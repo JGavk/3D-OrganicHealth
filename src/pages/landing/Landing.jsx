@@ -90,61 +90,61 @@ const Landing = () => {
 
    return (
     <>
-    <div id='container-for-background' className='landing-cont'>
-      <div id="inicio" className='landing-container' >
-        <div className='text-content-section'>
-          <p className='introduction-text'>
-            Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano
-          </p>
-          <div className='button-container'>
-            <button className='cta-button' onClick={() => scrollToSection('enfermedades')}>
-              DESCUBRE MÁS
-            </button>
-          </div>
-        </div>
-        <div className='threejs-section' ref={threeJsContainer} />
-      </div>
-    </div>
-      <div id='enfermedades' className='enfermedades-section'>
-        <p className='subtitle'>
-            Enfermedades cardíacas más comunes
-          </p>
-        <div className='carousel'>
-          {[
-            { id: 'stenosis', name: 'Estenosis aórtica', img: '/images/aaa.jpg'},
-            { id: 'beating', name: 'Insuficiencia cardíaca', img: '/images/bbb.jpg' },
-            { id: 'ischemic', name: 'Cardiopatía isquémica', img: '/images/ccc.jpg' },
-            { id: 'miocard', name: 'Infarto agudo del miocardio', img: '/images/ddd.jpg' }
-          ].map((enfermedad) => (
-            <div className='carousel-item' onClick={() => navigate(`/models/${enfermedad.id}`)} key={enfermedad.id}>
-              <img src={enfermedad.img} alt={enfermedad.name} />
-              <p>{enfermedad.name}</p>
-            </div>
-          ))}
-        </div>
-        <button className='cta-button' style={{ marginTop: '2rem' }} onClick={() => scrollToSection('quiz')}>
-          VER MÁS
-        </button>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=no"/>
+      <div id='container-for-background' className='landing-cont'>
+        <div id="inicio" className='landing-container' >
+          <div className='text-content-section'>
+            <p className='introduction-text'>
+              Descubre el fascinante mundo del corazón con nuestra plataforma interactiva, te ofrecemos información sobre las enfermedades cardíacas más comunes, complementada con modelos inmersivos en 3D para que explores cada detalle del órgano
+            </p>
+            <div className='button-container'>
+              <button className='cta-button-initial' onClick={() => scrollToSection('enfermedades')}/>
 
-      <section id="quiz" className="quiz-section">
-        <p className="subtitle">
-            Prueba el Quiz interactivo
-        </p>
-        <div className='carouselq'>
-          {[
-            { name: 'Quiz interactivo', img: '/images/quiz.gif' },
-          ].map((quiz) => (
-            <div className='carousel-item' key={quiz.name}>
-              <img src={quiz.img} alt={quiz.name} />
-              <p>{quiz.name}</p>
             </div>
-          ))}
+          </div>
+          <div className='threejs-section' ref={threeJsContainer} />
         </div>
-            <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
-            SUBIR
+      </div>
+        <div id='enfermedades' className='enfermedades-section'>
+          <p className='subtitle'>
+              Enfermedades cardíacas más comunes
+            </p>
+          <div className='carousel'>
+            {[
+              { id: 'stenosis', name: 'Estenosis aórtica', img: '/images/aaa.jpg'},
+              { id: 'beating', name: 'Insuficiencia cardíaca', img: '/images/bbb.jpg' },
+              { id: 'ischemic', name: 'Cardiopatía isquémica', img: '/images/ccc.jpg' },
+              { id: 'miocard', name: 'Infarto agudo del miocardio', img: '/images/ddd.jpg' }
+            ].map((enfermedad) => (
+              <div className='carousel-item' onClick={() => navigate(`/models/${enfermedad.id}`)} key={enfermedad.id}>
+                <img src={enfermedad.img} alt={enfermedad.name} />
+                <p>{enfermedad.name}</p>
+              </div>
+            ))}
+          </div>
+          <button className='cta-button' style={{ marginTop: '2rem' }} onClick={() => scrollToSection('quiz')}>
+            VER MÁS
           </button>
-        </section>
+        </div>
+
+        <section id="quiz" className="quiz-section">
+          <p className="subtitle">
+              Prueba el Quiz interactivo
+          </p>
+          <div className='carouselq'>
+            {[
+              { name: 'Quiz interactivo', img: '/images/quiz.gif' },
+            ].map((quiz) => (
+              <div className='carousel-item' key={quiz.name}>
+                <img src={quiz.img} alt={quiz.name} />
+                <p>{quiz.name}</p>
+              </div>
+            ))}
+          </div>
+              <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
+              SUBIR
+            </button>
+          </section>
     </>
   );
 }
