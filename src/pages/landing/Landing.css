@@ -1,12 +1,12 @@
 .landing-cont {
-  background-image: url('/backgrounds/backback.png');
+  background-image: url('/backgrounds/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh; 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .landing-container {
@@ -36,9 +36,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   justify-content: flex-end;
   text-align: center;
+  overflow: hidden;
 }
 
 .text-content-section h1 {
@@ -54,8 +54,7 @@
 .text-content-section p {
   font-family: Verdana, Geneva, sans-serif;
   color:rgb(59, 178, 182);
-  position: relative;
-  padding: 50px;
+  padding: 2rem;
   font-size: 1.6rem;
   text-align: justify;
 }
@@ -80,22 +79,37 @@
 
 .button-container {
   display: flex;
-  gap: 1rem;
-  width: 800 px;
-  padding-left: 5rem;
-  justify-content: center;
-  margin-top: 2rem;
+}
+.cta-button-initial {
+  background-image: url("/images/FABB.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #0e095e;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  height: 4.3rem;
+  width: 15rem;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.cta-button-initial:hover {
+  transform: scale(1.1) perspective(1px);
 }
 
 .cta-button {
-  padding: 1rem 2.4rem;
-  margin-bottom: 1rem;
-  background: transparent;
+  
   color: #0e095e;
+  background-color: transparent;
   border: none;
+  height: 4.3rem;
+  width: 15rem;
+  border-radius: 85px;
   font-size: 1.1rem;
-  width: 800px;
-  border-radius: 100px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
@@ -218,25 +232,25 @@
   .landing-container {
     flex-direction: column;
     height: auto;
+    background-size: contain;
     padding: 1rem;
   }
 
   .text-content-section {
     order: 2;
-    padding: 1rem;
-    width: 100%;
     justify-content: center;
   }
 
   .threejs-section {
     order: 1;
     width: 100%;
+    padding-top: 3rem;
     height: 300px;
   }
 
   .threejs-section canvas {
-    width: 100% !important;
-    height: 100% !important;
+    width: 74% !important;
+    height: 80% !important;
     object-fit: contain;
   }
 
@@ -247,7 +261,6 @@
   .text-content-section p,
   .subtitle {
     font-size: 1rem;
-    padding: 1rem;
     text-align: justify;
   }
 
@@ -255,3 +268,4 @@
     width: 100%;
   }
 }
+
