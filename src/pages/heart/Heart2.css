@@ -1,4 +1,4 @@
-.heart2-container {
+.heart2-container { 
   width: 100vw;
   height: 100vh;
   background: rgb(10, 20, 40);
@@ -51,21 +51,30 @@
   line-height: 1.5;
 }
 
-.description-panel button {
-  margin-top: 10px;
+/* Botones en fila */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  pointer-events: auto;
+}
+
+/* Estilo de los botones */
+.buttons-container button {
+  padding: 10px 18px;
   background-color: #e63946;
   color: white;
   border: none;
-  padding: 10px 18px;
   border-radius: 8px;
   cursor: pointer;
-  pointer-events: auto;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.description-panel button:hover {
-  opacity: 0.85;
+.buttons-container button:hover {
+  background-color: #b71c1c;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -80,7 +89,7 @@
     font-size: 1rem;
   }
 
-  .description-panel button {
+  .buttons-container button {
     font-size: 0.9rem;
     padding: 8px 14px;
   }

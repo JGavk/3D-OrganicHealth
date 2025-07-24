@@ -14,15 +14,15 @@ function HeartIssue() {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
-    <div className="heart-issue-container">
+    <div className="heart-scene-wrapper">
       <Canvas
         shadows
         camera={{ position: [0, 2, 5], fov: 50 }}
         gl={{ antialias: true }}
-        className={`heart-issue-canvas ${showOverlay ? 'no-events' : ''}`}
+        className={`heart-canvas ${showOverlay ? 'no-pointer' : ''}`}
       >
         <ambientLight intensity={0.7} />
-        <pointLight position={[3, 5, 2]} color="#88aaff" intensity={1.5} distance={50} decay={1} castShadow />
+        <pointLight position={[3, 5, 2]} color="#88aaff" intensity={1.5} />
         <DynamicLight disabled={showOverlay} />
         <ShadowPlane />
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
@@ -30,8 +30,8 @@ function HeartIssue() {
         <FixedText>Estenosis Aórtica</FixedText>
       </Canvas>
 
-      <div className="description-wrapper">
-        <div className="description-panel">
+      <div className="info-panel-wrapper">
+        <div className="info-panel">
           <h2>¿Qué es?</h2>
           <p>
             Es una enfermedad cardíaca que estrecha la válvula aórtica,
@@ -43,7 +43,11 @@ function HeartIssue() {
           </button>
         </div>
       </div>
-      {showOverlay && <Overlay onClose={() => setShowOverlay(false)} />}
+
+      {showOverlay && (
+        <Overlay onClose={() => setShowOverlay(false)} allowedIds={['stenosisSymp', 'StenosisOperation']} />
+      )}
+
       <Outlet />
     </div>
   );
