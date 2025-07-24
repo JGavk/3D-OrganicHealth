@@ -11,11 +11,10 @@
 
 
 .heart-issue-canvas {
-  pointer-events: auto; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  width: 100%;
+  height: clamp(400px, 60vh, 700px);
+  display: block;
+  pointer-events: auto;
 }
 
 .heart-issue-canvas.no-events {
@@ -24,7 +23,7 @@
 
 .description-wrapper {
   position: absolute;
-  bottom: 200px; 
+  bottom: clamp(6rem, 12vh, 10rem);
   left: 0;
   width: 100%;
   display: flex;
@@ -34,29 +33,21 @@
 }
 
 .description-panel {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80vw;
+  width: clamp(280px, 80vw, 700px);
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  overflow-y: auto; 
-  max-height: 200px;
+  max-height: clamp(150px, 25vh, 250px);
+  overflow-y: auto;
   pointer-events: none;
-  padding: 20px;
+  padding: clamp(1rem, 2vw, 1.5rem);
   border-radius: 12px;
   text-align: center;
-  font-size: 0.95rem;
-  z-index: 10;  
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  z-index: 10;
+  position: relative;
+  transform: translateY(clamp(2rem, 5vh, 4rem));
+}
 
-}
-@media (max-width: 600px) {
-  .description-panel {
-    font-size: 0.85rem;
-    padding: 15px;
-    max-height: 180px;
-  }
-}
 .description-panel button {
   pointer-events: auto;
   background: #7e8285;
@@ -73,21 +64,6 @@
   background: #2980b9;
 }
 
-.overlay-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  animation: fadeInOverlay 0.5s ease forwards;
-  pointer-events: none;
-}
 
 @keyframes fadeInOverlay {
   to {
@@ -97,9 +73,11 @@
 
 
 
-.instruction-panel {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
+
+@media (max-width: 600px) {
+  .description-panel {
+    font-size: 0.85rem;
+    padding: 15px;
+    max-height: 180px;
+  }
 }
