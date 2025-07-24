@@ -2,13 +2,12 @@ import { Outlet } from 'react-router';
 import { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import FixedText from '../../modeling/lights/FixedText';
-import Overlay from '../../modeling/overlay-data/Overlay';
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
-import IschemicHeartModel from '../../modeling/3d-models/WhatIsIH';
-import './IschemicHeart.css';
 import { Sparkles } from '@react-three/drei';
-
+import IschemicHeartModel from '../../modeling/3d-models/WhatIsIH';
+import OverlayIH from '../../modeling/overlay-data/OverlayIH';
+import './IschemicHeart.css';
 
 function IschemicHeart() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -47,7 +46,7 @@ function IschemicHeart() {
           </button>
         </div>
               {showOverlay && (
-        <Overlay onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH']} />
+        <OverlayIH onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH', 'CareIH']} />
       )}
       <Outlet />
     </div>
