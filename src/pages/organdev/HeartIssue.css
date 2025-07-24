@@ -40,7 +40,7 @@
   overflow-y: auto;
   pointer-events: none;
   padding: clamp(1rem, 2vw, 1.5rem);
-  border-radius: 12px;
+  border-radius: 13px;
   text-align: center;
   font-size: clamp(0.9rem, 1vw, 1rem);
   z-index: 10;
@@ -72,12 +72,3 @@
 }
 
 
-
-
-@media (max-width: 600px) {
-  .description-panel {
-    font-size: 0.85rem;
-    padding: 15px;
-    max-height: 180px;
-  }
-}
