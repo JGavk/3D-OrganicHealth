@@ -1,12 +1,19 @@
 import { useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
+import { useFrame } from '@react-three/fiber';
 
 function CareDiseaseModel(props) {
   const group = useRef();            
   const modelContainer = useRef();  
   const { scene } = useGLTF('/models/preventionCare.glb');
 
+  useFrame(() => {
+    if (group.current) {
+      group.current.rotation.y += 0.003;
+    }
+  });
+  
   useEffect(() => {
     if (!modelContainer.current) return;
 

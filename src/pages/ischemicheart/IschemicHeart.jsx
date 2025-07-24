@@ -6,7 +6,7 @@ import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
 import { Sparkles } from '@react-three/drei';
 import IschemicHeartModel from '../../modeling/3d-models/WhatIsIH';
-import OverlayIH from '../../modeling/overlay-data/OverlayIH';
+import Overlay from '../../modeling/overlay-data/Overlay';
 import './IschemicHeart.css';
 
 function IschemicHeart() {
@@ -46,7 +46,7 @@ function IschemicHeart() {
           </button>
         </div>
               {showOverlay && (
-        <OverlayIH onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH', 'CareIH']} />
+        <Overlay onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH', 'CareIH']} />
       )}
       <Outlet />
     </div>
