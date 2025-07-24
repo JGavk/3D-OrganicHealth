@@ -288,8 +288,45 @@
     text-align: justify;
   }
 
-  .cta-button {
-    width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .text-content-section h1 {
+    font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  }
+
+  .threejs-section canvas {
+    width: 80%;
+    height: 80%;
   }
 }
 
+@media (max-width: 1024px) {
+  .landing-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .text-content-section {
+    order: 2;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .threejs-section {
+    order: 1;
+    height: 320px;
+    padding-top: 2rem;
+  }
+
+  .threejs-section canvas {
+    width: 75%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  .text-content-section p {
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+  }
+
+}
