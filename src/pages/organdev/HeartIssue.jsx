@@ -43,7 +43,7 @@ function HeartIssue() {
           </button>
         </div>
       </div>
-      {showOverlay && <Overlay onClose={() => setShowOverlay(false)} allowedIds={['stenosisSymp', 'StenosisOperation']} />}
+      {showOverlay && <Overlay onClose={() => setShowOverlay(false)} />}
       <Outlet />
     </div>
   );
