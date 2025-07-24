@@ -122,9 +122,7 @@ const Landing = () => {
               </div>
             ))}
           </div>
-          <button className='cta-button' style={{ marginTop: '2rem' }} onClick={() => scrollToSection('quiz')}>
-            VER MÁS
-          </button>
+          <button className='cta-button-secondary' style={{ marginTop: '2rem' } }  onClick={() => scrollToSection('quiz')}/>
         </div>
 
         <section id="quiz" className="quiz-section">
@@ -141,9 +139,7 @@ const Landing = () => {
               </div>
             ))}
           </div>
-              <button className="cta-button" style={{ marginTop: '2rem' }} onClick={() => scrollToSection('inicio')}>
-              SUBIR
-            </button>
+              <button className="cta-button" style={{ marginBottom: '2rem', marginTop:'2rem' }} onClick={() => scrollToSection('inicio')}/>
           </section>
     </>
   );
