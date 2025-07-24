@@ -1,91 +1,76 @@
-.ischemic-heart-container {
+heart-scene-wrapper {
   width: 100vw;
   height: 100vh;
-  background: rgb(10, 20, 40);
-  cursor: grab;
   position: relative;
-  overflow: hidden;
+  background: #0a1428;
   display: flex;
-
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.ischemic-heart-canvas {
-  pointer-events: auto; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+.heart-canvas {
+  width: 100%;
+  height: clamp(400px, 60vh, 700px);
+  display: block;
+  pointer-events: auto;
 }
 
-.ischemic-heart-canvas.no-events {
+.heart-canvas.no-pointer {
   pointer-events: none;
 }
 
-.description-wrapper {
+.info-panel-wrapper {
   position: absolute;
-  bottom: 200px; 
+  bottom: clamp(3rem, 6vh, 5rem);
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: 10;
-  pointer-events: none; 
-}
-
-.description-panel {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80vw;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  overflow-y: auto; 
-  max-height: 200px;
   pointer-events: none;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 0.95rem;
-  z-index: 10;  
+}
 
-}
-@media (max-width: 600px) {
-  .description-panel {
-    font-size: 0.85rem;
-    padding: 15px;
-    max-height: 180px;
-  }
-}
-.description-panel button {
+.info-panel {
+  width: clamp(240px, 70vw, 600px);
+  background-color: rgba(0, 0, 0, 0.65);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  max-height: none;
+  overflow: hidden;
   pointer-events: auto;
+  padding: clamp(0.75rem, 1.5vw, 1.25rem);
+  border-radius: 10px;
+  text-align: center;
+  font-size: clamp(0.85rem, 0.95vw, 1rem);
+  transform: translateY(clamp(1.5rem, 3vh, 3rem));
+}
+
+.info-panel button {
   background: #7e8285;
   color: white;
   border: none;
-  padding: 8px 16px;
-  margin-top: 10px;
+  padding: 6px 12px;
+  margin-top: 8px;
   border-radius: 4px;
   cursor: pointer;
   font-family: inherit;
+  font-size: 0.9rem;
 }
-
-.description-panel button:hover {
+.info-panel button:hover {
   background: #2980b9;
 }
 
 .overlay-screen {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 100;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  padding: 1rem;
+  box-sizing: border-box;
   animation: fadeInOverlay 0.5s ease forwards;
-  pointer-events: none;
 }
 
 @keyframes fadeInOverlay {
@@ -94,43 +79,169 @@
   }
 }
 
-.instruction-panel {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.info-panel {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-  text-align: justify;
-  height: 100hv;
-}
-
-.text-2d-overlay {
-  position: absolute;
-  z-index: 10;
-  color: white;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 6px 10px;
-  border-radius: 6px;
-  pointer-events: none;
-}
-
-/* MODIFICADO PARA AJUSTARLO AL PANEL */
-.text-2d-overlay.title {
+.overlay-content {
+  width: clamp(320px, 95%, 1000px);
+  background: #232f46;
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: 10px;
   position: relative;
-  z-index: 11;
-  top: auto;
-  left: auto;
-  transform: none;
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-  pointer-events: none;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  pointer-events: auto;
+  cursor: default;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-canvas-container {
+  width: 100%;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.overlay-canvas-container canvas {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+  cursor: grab;
+}
+
+.overlay-next-button,
+.overlay-prev-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff22;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 10;
+}
+
+.overlay-next-button {
+  right: -1.5rem;
+}
+
+.overlay-prev-button {
+  left: -1.5rem;
+}
+
+.overlay-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1rem 2.4rem;
   background: transparent;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  font-size: 2rem;
+  z-index: 200;
+  cursor: pointer;
+}
+
+.overlay-close-button:hover {
+  background: #4978b6;
+}
+
+.overlay-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator-dot.active {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .overlay-next-button,
+  .overlay-prev-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .overlay-next-button {
+    right: 0.5rem;
+  }
+
+  .overlay-prev-button {
+    left: 0.5rem;
+  }
+
+  .overlay-close-button {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    top: 8px;
+    right: 8px;
+  }
+
+  .overlay-content {
+    padding: 1rem;
+  }
+
+  .overlay-canvas-container {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-content {
+    padding: 0.75rem;
+  }
+
+  .overlay-next-button,
+  .overlay-prev-button {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .overlay-close-button {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay-content {
+    padding: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .overlay-close-button {
+    font-size: 2.5rem;
+  }
+
+  .indicator-dot {
+    width: 14px;
+    height: 14px;
+  }
 }

@@ -1,27 +1,28 @@
 import { Outlet } from 'react-router';
-import { Canvas } from '@react-three/fiber';
-import { Sparkles } from '@react-three/drei';
 import { useState } from 'react';
-import IschemicHeartModel from '../../modeling/3d-models/IschemicHeartModel';
-import './IschemicHeart.css';
+import { Canvas } from '@react-three/fiber';
 import FixedText from '../../modeling/lights/FixedText';
+import Overlay from '../../modeling/overlay-data/Overlay';
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
-import OverlayIH from '../../modeling/overlay-data/OverlayIH';
+import IschemicHeartModel from '../../modeling/3d-models/WhatIsIH';
+import './IschemicHeart.css';
+import { Sparkles } from '@react-three/drei';
+
 
 function IschemicHeart() {
   const [showOverlay, setShowOverlay] = useState(false);
 
-  return (
-    <div className="ischemic-heart-container" tabIndex={0}>
-
+    return (
+    <div className="heart-scene-wrapper">
       <Canvas
         shadows
         camera={{ position: [0, 2, 5], fov: 50 }}
         gl={{ antialias: true }}
-        className={`ischemic-heart-canvas ${showOverlay ? 'no-events' : ''}`}
+        className={`heart-canvas ${showOverlay ? 'no-pointer' : ''}`}
       >
         <ambientLight intensity={0.7} />
+        <pointLight position={[3, 5, 2]} color="#88aaff" intensity={1.5} />
         <DynamicLight disabled={showOverlay} />
         <ShadowPlane />
         <spotLight
@@ -35,9 +36,9 @@ function IschemicHeart() {
         <FixedText>Cardiopatía Isquémica</FixedText>
       </Canvas>
 
-      <div className="description-wrapper">
-        <div className="description-panel">
-          <div className="text-2d-overlay title">¿Qué es?</div> 
+      <div className="info-panel-wrapper">
+        <div className="info-panel">
+          <h2>¿Qué es?</h2>
           <p>
             La cardiopatía isquémica ocurre cuando las arterias coronarias se estrechan o bloquean debido a la acumulación de placas de grasa, colesterol y otras sustancias (aterosclerosis). Esto reduce o interrumpe el flujo sanguíneo al corazón, disminuyendo el suministro de oxígeno y nutrientes necesarios para su funcionamiento. Sin suficiente oxígeno, el músculo cardíaco se debilita, lo que puede causar dolor en el pecho, insuficiencia cardíaca o incluso un infarto.
           </p>
@@ -45,10 +46,12 @@ function IschemicHeart() {
             ¿Quieres conocer más detalles?
           </button>
         </div>
-        {showOverlay && <OverlayIH onClose={() => setShowOverlay(false)} />}
-        <Outlet />
-      </div>
+              {showOverlay && (
+        <Overlay onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH']} />
+      )}
+      <Outlet />
     </div>
+  </div>
   );
 }
 export default IschemicHeart;
