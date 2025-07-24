@@ -4,7 +4,6 @@ import { Sparkles, SpotLight, Stars } from "@react-three/drei";
 import overlayTreatments from "./overData";
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
-import './Overlay.css';
 
 const Overlay = ({ onClose, allowedIds = [] }) => {
   const filteredTreatments = overlayTreatments.filter(t => allowedIds.includes(t.id));
