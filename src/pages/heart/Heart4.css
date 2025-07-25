@@ -1,0 +1,137 @@
+
+.heart4-container {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(10, 20, 40);
+  cursor: grab;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.heart4-canvas {
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.heart4-canvas.no-events {
+  pointer-events: none;
+}
+
+.description-wrapper {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.description-panel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  overflow-y: auto;
+  max-height: 200px;
+  pointer-events: none;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .description-panel {
+    font-size: 0.85rem;
+    padding: 15px;
+    max-height: 180px;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+  pointer-events: auto;
+}
+
+.button-group button {
+  background-color: #7e8285;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #e63946;
+}
+
+.overlay-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInOverlay 0.5s ease forwards;
+  pointer-events: auto;
+  padding: 2rem;
+}
+
+@keyframes fadeInOverlay {
+  to {
+    opacity: 1;
+  }
+}
+
+.info-panel {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.text-2d-overlay {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.text-2d-overlay.title {
+  position: relative;
+  z-index: 11;
+  top: auto;
+  left: auto;
+  transform: none;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  background: transparent;
+}
