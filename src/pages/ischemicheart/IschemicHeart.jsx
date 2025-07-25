@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import FixedText from '../../modeling/lights/FixedText';
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
-import { Sparkles } from '@react-three/drei';
+import { Html, Sparkles } from '@react-three/drei';
 import IschemicHeartModel from '../../modeling/3d-models/WhatIsIH';
 import Overlay from '../../modeling/overlay-data/Overlay';
 import './IschemicHeart.css';
@@ -12,7 +12,7 @@ import './IschemicHeart.css';
 function IschemicHeart() {
   const [showOverlay, setShowOverlay] = useState(false);
 
-    return (
+  return (
     <div className="heart-scene-wrapper">
       <Canvas
         shadows
@@ -21,7 +21,6 @@ function IschemicHeart() {
         className={`heart-canvas ${showOverlay ? 'no-pointer' : ''}`}
       >
         <ambientLight intensity={0.7} />
-        <pointLight position={[3, 5, 2]} color="#88aaff" intensity={1.5} />
         <DynamicLight disabled={showOverlay} />
         <ShadowPlane />
         <spotLight
@@ -29,11 +28,12 @@ function IschemicHeart() {
           position={[1, 1, 1]}
           angle={1}
           penumbra={0.5}
-          intensity={2} />
+          intensity={3} />
         <Sparkles count={80} scale={6} speed={1.5} />
         <IschemicHeartModel scale={1} position={[0, 0, 0]} />
         <FixedText>Cardiopatía Isquémica</FixedText>
       </Canvas>
+
 
       <div className="info-panel-wrapper">
         <div className="info-panel">
@@ -45,12 +45,32 @@ function IschemicHeart() {
             ¿Quieres conocer más detalles?
           </button>
         </div>
-              {showOverlay && (
-        <Overlay onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH', 'CareIH']} />
-      )}
-      <Outlet />
+
+        {showOverlay && (
+          <Overlay onClose={() => setShowOverlay(false)} allowedIds={['SymptomsIH', 'TreatmentIH', 'CareIH']} />
+        )}
+        <Outlet />
+      </div>
+
+      <div
+        style={{
+          position: 'fixed',
+          top: '430px',
+          left: '1650px',
+          background: 'rgba(0, 0, 0, 0.65)',
+          color: 'white',
+          padding: '1rem',
+          borderRadius: '10px',
+          width: '200px',
+          fontSize: '13px',
+          textAlign: 'justify',
+          zIndex: 10,
+          fontFamily: 'Segoe UI, sans-serif',
+        }}
+      >
+        Presiona T o B para cambiar el ritmo. Haz clic en el corazón para activar o detener el sonido.
+      </div>
     </div>
-  </div>
   );
 }
 export default IschemicHeart;

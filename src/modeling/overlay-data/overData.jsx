@@ -37,7 +37,7 @@ const overlayTreatments = [
   {
     id: 'CareIH',
     title: 'Prevención y Cuidados',
-    getModel: () => <CareDiseaseModel scale={2.0} position={[0, 1, 0]} />,
+    getModel: () => <CareDiseaseModel scale={2.5} position={[0, 1, 0]} />,
     description: `Para prevenir la cardiopatía isquémica se recomienda una alimentación saludable, ejercicio regular, evitar el tabaco, controlar el estrés, vigilar la presión arterial y el colesterol, y mantener un peso adecuado.`,
   }
 ];
