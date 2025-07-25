@@ -40,14 +40,14 @@ const overlayTreatments = [
     title: 'Prevención y Cuidados',
     getModel: () => <CareDiseaseModel scale={2.5} position={[0, 1, 0]} />,
     description: `Para prevenir la cardiopatía isquémica se recomienda una alimentación saludable, ejercicio regular, evitar el tabaco, controlar el estrés, vigilar la presión arterial y el colesterol, y mantener un peso adecuado.`,
-  }
-    {
+  },
+  
+  {
     id: 'KKK',
     title: 'Cuidados',
     getModel: () => <StenosisSymptoms scale={1} position={[0, 0, 0]} />,
     description: `La estenosis aórtica requiere cuidados especiales para manejar los síntomas y prevenir complicaciones. Es fundamental seguir indicaciones como:
-     medicamentos, dieta, actividad física, no fumar entre otros cuidados diarios
-     `,
+     medicamentos, dieta, actividad física, no fumar entre otros cuidados diario`,
   },
 ];
 export default overlayTreatments;
