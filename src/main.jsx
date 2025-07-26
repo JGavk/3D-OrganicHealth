@@ -8,6 +8,8 @@ import IschemicHeart from './pages/ischemicheart/IschemicHeart';
 import Heart1 from './pages/heart/Heart1';
 import Heart2 from './pages/heart/Heart2'; 
 import Heart3 from './pages/heart/Heart3';
+import Heart4 from './pages/heart/Heart4';
+
 import HeartIssue from './pages/organdev/HeartIssue';
 import AboutUs from './pages/about-us/AboutUs';
 
@@ -28,7 +30,9 @@ createRoot(document.getElementById('root')).render(
         <Route path='/models/ischemic' element={<IschemicHeart />} />
         <Route path='/models/miocard' element={<Heart1 />} />
         <Route path='/models/sintomas' element={<Heart2 />} /> 
-         <Route path='/models/solutions' element={<Heart3 />} />
+        <Route path='/models/solutions' element={<Heart3 />} />
+        <Route path="/models/final-model" element={<Heart4 />} />
+
         <Route path='/about' element={< AboutUs/>}/>
       </Routes>
     </Layout>
