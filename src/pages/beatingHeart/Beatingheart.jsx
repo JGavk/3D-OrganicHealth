@@ -54,14 +54,14 @@ function Beatingheart() {
           </p>
 
           <button onClick={() => setShowOverlay(true)}>
-            ¿Quieres conocer los sintomas?
+            🔍 ¿Quieres conocer más?
           </button>
         </div>
       </div>
       {showOverlay && (
         <OverlayC
           onClose={() => setShowOverlay(false)}
-          allowedIds={["symptoms", "treatments"]}
+          allowedIds={["symptoms", "treatments", "prevention"]}
         />
       )}
       <Outlet />

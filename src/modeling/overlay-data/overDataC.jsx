@@ -1,10 +1,11 @@
-import Heartf from '../3d-models/Heartf';
-import Heartr from '../3d-models/Heartr';
+import Heartf from "../3d-models/Heartf";
+import Heartr from "../3d-models/Heartr";
+import Heartc from "../3d-models/Heartc";
 
 const overlayInfoCr = [
   {
-    id: 'symptoms',
-    title: 'Sintomas',
+    id: "symptoms",
+    title: "Sintomas",
     getModel: () => <Heartf scale={34} position={[-1, -1, 0]} />,
     description: `  Los síntomas pueden desarrollarse lentamente. A veces, los
                     síntomas de la insuficiencia cardíaca comienzan
@@ -22,8 +23,8 @@ const overlayInfoCr = [
                     ataque cardíaco.`,
   },
   {
-    id: 'treatments',
-    title: 'Tratamientos',
+    id: "treatments",
+    title: "Tratamientos",
     getModel: () => <Heartr scale={7} position={[0, 0.5, 0]} />,
     description: `🧪 1. Tratamiento farmacológico (medicación) a. Primera
                     línea: IECA (Inhibidores de la ECA): enalapril, lisinopril →
@@ -58,6 +59,22 @@ const overlayInfoCr = [
                     también protejan el corazón (como SGLT2i). Fibrilación
                     auricular: control de ritmo o frecuencia, anticoagulación si
                     es necesario.`,
+  },
+  {
+    id: "prevention",
+    title: "Prevencion",
+    getModel: () => <Heartc scale={7} position={[0, 0.5, 0]} />,
+    description: `❤️ Adherencia al tratamiento médico
+                  Tomar la medicación puntualmente (IECA, betabloqueadores, diuréticos, etc.) y nunca 
+                  suspender ni ajustar dosis sin consultar al médico. Llevar un registro diario de las tomas ayuda a no olvidarlas.
+                  ⚖️ Control de peso y retención de líquidos
+                   Pesarse a diario a la misma hora y con la misma ropa. Un aumento de >2 kg en 2–3 días 
+                   puede indicar retención de líquidos. Limitar líquidos (1,5–2 L/día si está indicado) y reducir 
+                   al máximo el consumo de sal (<2 g de sodio/día).
+                   🥗 Alimentación y hábitos saludables
+                   Seguir una dieta rica en verduras, frutas, cereales integrales y proteínas magras. 
+                   Evitar grasas saturadas y trans (embutidos, fritos, repostería industrial). No fumar y moderar o eliminar 
+                   el alcohol según recomendación médica.`,
   },
 ];
 export default overlayInfoCr;
