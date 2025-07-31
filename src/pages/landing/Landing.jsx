@@ -129,7 +129,7 @@ const Landing = () => {
           <p className="subtitle">
               Prueba el Quiz interactivo
           </p>
-          <div className='carouselq'>
+          <div className='carouselq'  onClick={() => navigate('/quiz')}>
             {[
               { name: 'Quiz interactivo', img: '/images/quiz.gif' },
             ].map((quiz) => (
