@@ -17,13 +17,13 @@ export const getQuestions = async (limit = 5) => {
 
 
 
-export const submitAnswer = async ({ questionId, selectedOption }) => {
-  const userId = "mock-user-123";
+export const submitAnswer = async ({ userId, questionId, selectedOption }) => {
   console.log("Enviando respuesta:", {
-  user_id: userId,
-  question_id: questionId,
-  selected_option: selectedOption,
-});
+    user_id: userId,
+    question_id: questionId,
+    selected_option: selectedOption,
+  });
+
   try {
     const res = await axios.post(`${API_BASE_URL}/submit-answer`, {
       user_id: userId,
@@ -34,5 +34,16 @@ export const submitAnswer = async ({ questionId, selectedOption }) => {
   } catch (err) {
     console.error("Error submitting answer", err);
     throw err;
+  }
+};
+
+
+export const getLeaderboard = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/leaderboard`);
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener el leaderboard:", error);
+    throw error;
   }
 };
