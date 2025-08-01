@@ -22,7 +22,7 @@ function IschemicHeartModel() {
 
     const sound = new THREE.PositionalAudio(listener);
     const audioLoader = new THREE.AudioLoader();
-    audioLoader.load('/public/sounds/heartBeat.mp3', (buffer) => {
+    audioLoader.load('/sounds/heartBeat.mp3', (buffer) => {
       sound.setBuffer(buffer);
       sound.setRefDistance(1);
       sound.setLoop(false);
