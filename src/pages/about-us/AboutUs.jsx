@@ -7,7 +7,7 @@ function AboutUs() {
         <div id='grupo' className='grupo-section'>
 
             <p className='subtitlee' >
-                    Equipo de desarrollo
+                    Equipo de Desarrollo
                 </p>
             <div className='carouselg'>
                 {[

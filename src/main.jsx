@@ -13,6 +13,7 @@ import Quiz from './pages/quiz/quiz';
 
 import HeartIssue from './pages/organdev/HeartIssue';
 import AboutUs from './pages/about-us/AboutUs';
+import SiteMap from './pages/map/SiteMap'
 
 const getBasename = () => {
   if (import.meta.env.DEV) return '';
@@ -35,6 +36,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/models/final-model" element={<Heart4 />} />
         <Route path='/quiz' element={< Quiz/>}/>
         <Route path='/about' element={< AboutUs/>}/>
+        <Route path='/map' element={<SiteMap />}/>
       </Routes>
     </Layout>
   </BrowserRouter>
