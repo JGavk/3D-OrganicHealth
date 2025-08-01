@@ -51,6 +51,7 @@ function Heart3() {
           <div className="button-group">
             <button onClick={() => setShowOverlay(true)}>Posibles Tratamientos</button>
             <button onClick={() => navigate('/models/sintomas')}>Ir a Síntomas</button>
+            <button onClick={() => navigate('/models/final-model')}>Siguiente Modelo</button>
           </div>
         </div>
 
