@@ -26,7 +26,7 @@ function IschemicHeartModel() {
       sound.setBuffer(buffer);
       sound.setRefDistance(1);
       sound.setLoop(false);
-      sound.setVolume(1);
+      sound.setVolume(7);
     });
 
     audioRef.current = sound;
