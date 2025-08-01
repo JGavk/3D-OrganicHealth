@@ -12,7 +12,7 @@ function AboutUs() {
             <div className='carouselg'>
                 {[
                     { name: 'Juan Pablo Puerta Gaviria', img: '/images/yo.jpg' },
-                    { name: 'Cristhian Felipe Ramirez Marulanda', img: '/images/bbb.jpg' },
+                    { name: 'Cristhian Felipe Ramirez Marulanda', img: '/images/foto.png' },
                     { name: 'Jenifer Ortiz Torres', img: '/images/jot.jpg' },
                     { name: 'Xavier Andreu Lopez Robledo', img: '/images/xalr.jpg' }
                 ].map((grupo) => (
