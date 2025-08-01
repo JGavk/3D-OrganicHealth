@@ -41,9 +41,10 @@ function Heart4() {
 
       <div className="description-wrapper">
         <div className="description-panel">
-          <div className="text-2d-overlay title">Modelo Cardíaco 4</div>
-          <p>
-            Esta vista muestra un modelo avanzado del corazón en estado post-quirúrgico o con intervención. Aquí puedes observar detalles específicos de tratamiento o evolución.
+          <div className="text-2d-overlay title">Post Infarto Agudodo Del Miocardio</div>
+          <p> 
+            Después de sufrir un infarto agudo del miocardio, es fundamental mantener un seguimiento médico estricto para controlar la evolución y prevenir nuevas complicaciones. Participar en un programa de rehabilitación cardíaca ayuda a recuperar la capacidad física y a retomar la vida diaria con mayor seguridad. Además, es necesario realizar cambios importantes en el estilo de vida, como adoptar una alimentación saludable, dejar de fumar, reducir el consumo de alcohol y mantenerse activo físicamente. Controlar los factores de riesgo como la hipertensión, la diabetes y el colesterol alto es clave para proteger el corazón a largo plazo. No se debe descuidar la salud emocional, ya que muchas personas experimentan ansiedad o depresión después del infarto; buscar apoyo psicológico o hablar con personas cercanas puede ser de gran ayuda. Durante la recuperación también es importante evitar riesgos innecesarios, como esfuerzos físicos intensos o la suspensión de medicamentos sin supervisión médica. Por último, educarse sobre el infarto y conocer los síntomas de alarma permite actuar a tiempo ante cualquier señal de advertencia y tomar decisiones más conscientes sobre la salud.
+            
           </p>
 
           <div className="button-group">
@@ -69,3 +70,4 @@ function Heart4() {
 }
 
 export default Heart4;
+
