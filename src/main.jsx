@@ -10,6 +10,7 @@ import Heart2 from './pages/heart/Heart2';
 import Heart3 from './pages/heart/Heart3';
 import HeartIssue from './pages/organdev/HeartIssue';
 import AboutUs from './pages/about-us/AboutUs';
+import SiteMap from './pages/map/SiteMap'
 
 const getBasename = () => {
   if (import.meta.env.DEV) return '';
@@ -30,6 +31,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/models/sintomas' element={<Heart2 />} /> 
          <Route path='/models/solutions' element={<Heart3 />} />
         <Route path='/about' element={< AboutUs/>}/>
+        <Route path='/map' element={<SiteMap />}/>
       </Routes>
     </Layout>
   </BrowserRouter>
