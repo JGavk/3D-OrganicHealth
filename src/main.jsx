@@ -10,7 +10,7 @@ import Heart2 from './pages/heart/Heart2';
 import Heart3 from './pages/heart/Heart3';
 import Heart4 from './pages/heart/Heart4';
 import Quiz from './pages/quiz/quiz';
-import Login from './pages/log-in/login';
+import Login from './pages/log-in/Login';
 import HeartIssue from './pages/organdev/HeartIssue';
 import AboutUs from './pages/about-us/AboutUs';
 import SiteMap from './pages/map/SiteMap'
