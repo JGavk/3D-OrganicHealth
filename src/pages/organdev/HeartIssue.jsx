@@ -8,6 +8,7 @@ import HeartModel from '../../modeling/3d-models/HeartModel';
 import Overlay from '../../modeling/overlay-data/Overlay';
 import ShadowPlane from '../../modeling/recipient/ShadowPlane';
 import DynamicLight from '../../modeling/lights/Light';
+import Annotation from '../../modeling/lights/Annotation';
 import './HeartIssue.css'; 
 
 function HeartIssue() {
@@ -28,6 +29,18 @@ function HeartIssue() {
         <Stars radius={100} depth={50} count={5000} factor={4} fade />
         <HeartModel scale={1} position={[0, 0, 0]} />
         <FixedText>Estenosis Aórtica</FixedText>
+        <Annotation
+          position={[0.3, 0.7, 0.2]}
+          info="La aorta es la arteria principal que transporta sangre rica en oxígeno desde el corazón al resto del cuerpo"
+        >
+          Aorta
+        </Annotation>
+        <Annotation
+          position={[-1.2, 0.5, -0.7]}
+          info="vena grande que transporta la sangre desoxigenada de regreso al corazón"
+        >
+          Vena Cava
+        </Annotation>
       </Canvas>
 
       <div className="info-panel-wrapper">
