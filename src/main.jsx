@@ -10,6 +10,7 @@ import Heart2 from './pages/heart/Heart2';
 import Heart3 from './pages/heart/Heart3';
 import Heart4 from './pages/heart/Heart4';
 import Quiz from './pages/quiz/quiz';
+import Login from './pages/login/Login';
 
 import HeartIssue from './pages/organdev/HeartIssue';
 import AboutUs from './pages/about-us/AboutUs';
@@ -22,9 +23,11 @@ const getBasename = () => {
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter basename={getBasename()}>
+     
     <Layout>
       <Routes>
         <Route path='/' element={<Landing />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/models' element={<Problems />} />
         <Route path='/models/stenosis' element={<HeartIssue />} />
         <Route path='/models/beating' element={<BeatingHeart />} />
